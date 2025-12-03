@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Demo</title>
+  </head>
+  <body>
+    <h1>Forms Demo</h1>
+    <form action="/tacos">
+      <div>
+        <label for="username">Enter a username</label>
+        <input type="text"placeholder="Username" id="username"/ name="username">
+      </div>
+      <div>
+        <label for="password">Enter your password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          name="password"
+        />
+      </div>
+
+      <div>
+        <label for="color">Pick a color</label>
+        <input type="color" id="color" name="color" />
+      </div>
+      <div>
+        <label for="number">Enter a number</label>
+        <input
+          type="number"
+          placeholder="Enter a number"
+          id="number"
+          name="num"
+          min="1"
+          max="1000"
+        />
+      </div>
+      <button>sumbit</button>
+    </form>
+    <hr />
+    <h2>Hijacking Forms</h2>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" />
+      <button>Search Google</button>
+    </form>
+    <h3>Search YouTube</h3>
+    <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" />
+      <button>Search YouTube</button>
+    </form>
+
+    <h2>More inputs</h2>
+    <h3>Check box</h3>
+    <form action="/foods">
+      <input type="checkbox" name="agree_tos" id="agree" />
+      <label for="agree">I agree to everything</label>
+      <h3>Radio box</h3>
+      <p>
+        <input type="radio" name="size" value="s" id="small" />
+        <label for="small">Small</label>
+        <input type="radio" name="size" value="m" id="medium" />
+        <label for="medium">Medium</label>
+        <input type="radio" name="size" value="l" id="large" />
+        <label for="large">Large</label>
+      </p>
+      <button>Submit</button>
+      <h3>Select form</h3>
+      <p>
+        <label for="taco_type">Choose your taco type:</label>
+        <select name="taco_type" id="taco_type">
+          <option value="carne_asada">Carne Asada</option>
+          <option value="pollo">Pollo</option>
+          <option value="al_pastor">Al Pastor</option>
+          <option selected value="carnitas">Carnitas</option>
+          <option value="vegy">Vegy</option>
+        </select>
+      </p>
+      <p>
+        <label for="Cheese">Amount of Cheese</label>
+        <input
+          type="range"
+          name="Cheese_level"
+          id="Cheese"
+          min="0"
+          max="100"
+          value="10"
+          step="5"
+        />
+      </p>
+      <p>
+        <label for="request">Any special requests?</label>
+        <textarea name="request" id="request" rows="5" cols="20">
+Type here any requests?</textarea
+        >
+      </p>
+
+
+      <h2>Validation Demo</h2>
+      <form action="/dummy">
+        <label for="first">Enter your First name</label>
+        <input type="text" name="first" id="first" required >
+        <br />
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" minlength="5" maxlength="17" required>
+        <br>  
+        <button>Submit</button>
+        <input type="email" name="" id="" required placeholder="Enter your email">
+    </form>
+  </body>
+</html>
